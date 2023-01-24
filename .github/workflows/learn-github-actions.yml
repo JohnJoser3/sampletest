@@ -36,7 +36,7 @@ jobs:
 #      - name: 'Running test'  # Invokes the actual test script that would run on BrowserStack browsers
 #        run: mvn test MyClass.java 
 
-#      - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
-#        uses: browserstack/github-actions/setup-local@master
-#        with:
-#          local-testing: stop
+      - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
+        uses: browserstack/github-actions/setup-local@master
+        with:
+          local-testing: stop
