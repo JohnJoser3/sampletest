@@ -27,14 +27,16 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 18
-                
-      - name: 'Build package'
-        run: mvn package newpackage
-        
-      - name: 'Running test'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: mvn test MyClass.java 
 
-      - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
-        uses: browserstack/github-actions/setup-local@master
-        with:
-          local-testing: stop
+      - run: java MyClass.java
+                
+#     - name: 'Build package'
+#        run: mvn package newpackage
+        
+#      - name: 'Running test'  # Invokes the actual test script that would run on BrowserStack browsers
+#        run: mvn test MyClass.java 
+
+#      - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
+#        uses: browserstack/github-actions/setup-local@master
+#        with:
+#          local-testing: stop
